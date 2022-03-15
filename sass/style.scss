@@ -1,0 +1,467 @@
+@import 'colors';
+@import 'animation';
+
+*, *::before, *::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    scroll-padding-top: 56px;
+}
+
+body{
+    position: relative;
+    font-family: 'Montserrat', sans-serif;
+    background-color: $bg-color;
+
+}
+
+h2{
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.underline{
+    margin: 0 auto 40px;
+    width: 60px;
+    height: 4px;
+    background-color: $main-color;
+}
+
+.blue-text{
+    color: $main-color;
+}
+
+.shadow-bg{
+    background-color: rgba(0,0,0,.8);
+
+}
+
+nav {
+    transition: background-color .6s;
+    text-transform: uppercase;
+    z-index: 1;
+    .nav-link, i{
+        color: $white;
+    }
+    .navbar-brand{
+        color: $white;
+        font-weight: bold;
+    }
+    .nav-link:hover{
+        color: $main-color;
+    }
+    .fa-bars{
+        padding: 2px 5px 2px 5px;
+    }
+
+    .active{
+        color: $main-color;
+    }
+
+}
+
+header {
+    color: $white;
+
+    h1{
+        font-size: 30px;
+        text-transform: uppercase;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
+    .hero-img{
+        position: relative;
+        height: 100vh;
+        background-image: url('../img/imgs.jpg');
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        z-index: 0;
+    }
+
+    .hero-shadow{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.8);
+        z-index: -10;
+    }
+
+    .hero-text{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        padding: 10px;
+        text-align: center;
+        z-index: 5;
+    }
+    .btn-outline-light{
+        text-transform: uppercase;
+    }
+    .fa-angles-down{
+        position: absolute;
+        bottom: 20px;
+        font-size: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        color: $white;
+    }
+
+}
+
+.aboutus{
+    i{
+        margin-top: 20px;
+        font-size: 30px;
+    }
+    .aboutus-card-title{
+        font-size: 18px;
+        text-transform: uppercase;
+    }
+    .aboutus-card-text{
+        font-size: 14px;
+    }
+    .aboutus-hover{
+        transition: color .5s;
+    }
+    .aboutus-hover:hover{
+        color: $main-color;
+    }
+}
+
+.under-hero-img{
+    position: relative;
+    background-image: url('../img/procesormaly.jpg');
+    background-position: center;
+    background-size: cover;
+    color: $white;
+    z-index: 0;
+      
+    .under-card-text{
+        font-size: 14px;
+    }
+    
+    .under-hero-shadow{
+        background-color: rgba(0,0,0,.6);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: -10;
+        top: 0;
+    }
+    
+    .aboutus-hero-item{
+        margin: 10px 0;
+
+        i{
+            font-size: 36px;
+        }
+        
+        .under-card-title{
+            font-size: 24px;
+        }
+    }
+
+}
+
+.portfolio{
+    .carousel-item{
+        position: relative;
+        height: 600px;
+    }
+
+    .carousel-caption{
+        position: absolute;
+        left: 0;
+        right: 0;
+        padding: 40px 0 ;
+        background-color: rgba(0,0,0,.5);
+    }
+    .carousel-indicators{
+        padding-bottom: 20px;
+    }
+
+}
+
+
+.prices{
+
+    .my-card{
+        margin: 20px 10px;
+        padding: 30px;
+        background-color: white;
+        box-shadow: 5px 5px 5px rgba(0,0,0,.4);
+        transition: transform .3s;
+
+        h3{
+            color: $main-color;
+            text-transform: uppercase;
+        }
+
+        span{
+            font-weight: bold;
+        }
+
+        i{
+            padding: 0 5px;
+            font-size: 22px;
+        }
+        button{
+            padding: 10px 20px;
+            text-transform: uppercase;
+        }
+        .price-tag{
+            font-weight: bold;
+            font-size: 30px;
+        }
+
+    }
+
+    .my-card:hover{
+        transform: scale(1.05);
+    }
+
+    .price-info{
+        margin-top: 30px;
+
+        a{
+            text-decoration: none;
+        }
+    }
+
+}
+
+
+
+.team{
+    position: relative;
+    
+    
+    
+    h2{
+        color: $bg-color;
+    }
+
+    .team-img{
+        position: relative;
+        background-image: url('https://pixabay.com/get/gb1052f57dcdddf32594f4d08e56244b86785131fdfc8c1c14c06018ac447b5557d782e11aeaae401bf020177cda413dc069a9568567f4e7a4558551dbdf627be2618cb83fb5c363537aae9e11694eece_1920.jpg');
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        z-index: 0;
+
+    }
+    .shadow-team-img{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0,0,0,.7);
+        z-index: -10;
+
+    }
+
+    .card{
+
+        transition: transform .4s;
+        margin-bottom: 60px;
+        img{
+            height: 300px;
+            object-fit: cover;
+        }
+
+        i{
+            padding: 10px;
+        }
+
+        
+        .card-title{
+            margin-bottom: 20px;
+            text-align: center;
+            text-transform: uppercase;
+        }
+        .card-body{
+            height: 160px;
+        }
+    }
+    .card:hover{
+        transform: scale(.95);
+    }
+}
+
+
+.achievements{
+    i{
+        padding: 10px;
+        font-size: 48px;
+        color: $white;
+        text-shadow: 0 0 5px #000;
+    }
+
+    .achievements-list{
+        padding: 20px 0;
+    }
+
+    .achievement-number{
+        font-size: 22px;
+    }
+
+    .achievement-text{
+        font-size: 13px;
+        text-transform: uppercase;
+    }
+
+
+}
+
+
+.contact{
+    position: relative;
+
+    
+    h2{
+        padding-top: 40px;
+        color: $light-grey;
+    }
+    .underline{
+        background-color: $light-grey;
+        margin-bottom: 30px;
+    }
+
+    .contact-us{
+        color: $light-grey;
+        padding-bottom: 50px;
+        display: flex;
+        align-items: center;
+
+        .contact-item{
+            margin: 30px 0;
+
+            h3{
+                margin-bottom: 15px;
+                text-transform: uppercase;
+                letter-spacing: 2px;
+            }
+
+            .social-media{
+                font-size: 26px;
+
+                a{
+                    padding: 10px;
+                    color: white;
+                }
+
+                a:hover{
+                    color: $light-grey;
+                }
+            }
+
+
+        }
+
+
+    }
+
+    .contact-img{
+        position: relative;
+        background-image: url('https://pixabay.com/get/g27ad7683f5be5d7a7f921d178ea64bb7fbc18b7ec62b472175de7b4719ea51e273919e471cd5d0184517fe7c0f2e9cafae72bcc5d0bcb4e9488b319967aef4feab9ad99e24daeb818d1adc2322a6fa4c_1920.jpg');
+        background-position: bottom;
+        background-size: cover;
+        background-attachment: fixed;
+        z-index: 0;
+    }
+    .contact-shadow{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 9, 27, 0.85);
+        z-index: -10;
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+@media(min-width: 375px){
+    nav{
+        .nav-link{
+            font-size: 13px;
+        }
+    }
+    header{
+        h1{
+            font-size: 35px;
+        }
+        
+        p{
+            font-size: 16px;
+        }
+    }       
+}    
+
+
+
+@media(min-width: 768px){
+    
+    header{
+        h1{
+            font-size: 42px;
+        }
+        
+        p{
+            font-size: 20px;
+        }
+    }  
+    
+    
+} 
+
+@media(min-width: 992px){
+    
+    nav{
+        height: 56px;
+    }
+
+
+    .under-hero-img{
+
+        background-image: url('../img/procesorduzy.jpg');
+    }
+
+
+    .prices{
+        .price-info{
+            font-size: 28px;
+        }
+    }
+       
+}
+
+@media(min-width: 1200px){
+    
+    header{
+        .hero-img{
+        background-image: url('../img/imgb.jpg');
+        }
+    }
+       
+}
+
+
+
+
